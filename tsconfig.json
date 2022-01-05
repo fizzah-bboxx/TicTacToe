@@ -5,7 +5,8 @@
       "module": "commonjs",
       "esModuleInterop": true,
       "strict": true,
-      "removeComments": true,
+      "strictNullChecks": true,
+      "removeComments": false,
       "rootDir": "./scripts/tsc",
       "outDir": "./scripts/js"
     },

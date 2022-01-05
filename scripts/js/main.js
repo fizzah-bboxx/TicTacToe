@@ -1,7 +1,7 @@
 "use strict";
 var GameLogic = (function () {
     function GameLogic() {
-        this.isFilled = function (arr) { return arr.every(function (x) { return x !== ''; }); };
+        this.isFilled = function (arr) { return arr.every(function (x) { return !!x; }); };
         this.game_board = new Array(9).fill('');
     }
     GameLogic.prototype.updateBoard = function (player, index) {
@@ -11,7 +11,7 @@ var GameLogic = (function () {
         }
     };
     GameLogic.prototype.checkWin = function (currentPlayer) {
-        var iter = { "vert": 0, "hori": 0 };
+        var iter = { vert: 0, hori: 0 };
         var result = false;
         if ((new Set([this.game_board[0],
             this.game_board[4],
@@ -24,19 +24,19 @@ var GameLogic = (function () {
             result = true;
         }
         else {
-            while (iter["hori"] < 3) {
-                if ((new Set([this.game_board[iter['vert']],
-                    this.game_board[iter['vert'] + 1],
-                    this.game_board[iter['vert'] + 2],
+            while (iter.hori < 3) {
+                if ((new Set([this.game_board[iter.vert],
+                    this.game_board[iter.vert + 1],
+                    this.game_board[iter.vert + 2],
                     currentPlayer]).size === 1) ||
-                    (new Set([this.game_board[iter['hori']],
-                        this.game_board[iter['hori'] + 3],
-                        this.game_board[iter['hori'] + 6],
+                    (new Set([this.game_board[iter.hori],
+                        this.game_board[iter.hori + 3],
+                        this.game_board[iter.hori + 6],
                         currentPlayer]).size === 1)) {
                     result = true;
                 }
-                iter['vert'] += 3;
-                iter['hori']++;
+                iter.vert += 3;
+                iter.hori++;
             }
         }
         return result;

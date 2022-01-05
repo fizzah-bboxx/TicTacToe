@@ -26,6 +26,23 @@
   align-items: center;
   margin: 0 auto;
 }
+.box:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.name-board{
+  width: 500px;
+	height: 150px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #2c3e50;
+}
 
 .winner-board{
   visibility: hidden;
@@ -42,8 +59,8 @@
 }
 
 .reset-button {
-  width: 500px;
-	height: 150px;
+  width: 450px;
+	height: 100px;
   align-items: center;
   background-color: #FCFCFD;
   border-radius: 4px;
