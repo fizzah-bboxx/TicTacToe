@@ -1,0 +1,7 @@
+To run the code execute 
+
+npm i
+npm run build # to compile TypeScript
+npm run watch # to set a TypeScript watch
+
+Go to index.html in browser
