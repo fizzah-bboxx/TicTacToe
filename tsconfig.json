@@ -2,13 +2,13 @@
     "compilerOptions": {
       "lib": ["es2016", "dom"],
       "target": "es5",
-      "module": "commonjs",
-      "esModuleInterop": true,
+      "module": "es6",
+      "moduleResolution": "node",
       "strict": true,
       "strictNullChecks": true,
       "removeComments": false,
       "rootDir": "./scripts/tsc",
       "outDir": "./scripts/js"
     },
-    "include": ["**.ts", "scripts/tsc/main.ts"],
+    "include": ["**.ts", "scripts/tsc/**.ts"],
   }

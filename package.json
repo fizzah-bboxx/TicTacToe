@@ -2,7 +2,7 @@
   "name": "TicTacToe",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/tictactoe.js",
+  "main": "scripts/js/main.js",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w"
